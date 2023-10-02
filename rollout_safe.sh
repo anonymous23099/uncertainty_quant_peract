@@ -34,8 +34,8 @@
 
 
 tasks=(
-    # change_channel 
-    # close_jar 
+    change_channel 
+    close_jar 
     insert_onto_square_peg 
     light_bulb_in 
     meat_off_grill 
@@ -87,7 +87,7 @@ export PYTHONPATH=/home/bobwu/UQ/peract_headless
 
 for t in "${tasks[@]}"; do
     for tau_value in 5; do
-        CUDA_VISIBLE_DEVICES=3 python peract_reliability/eval.py \
+        CUDA_VISIBLE_DEVICES=2 python peract_reliability/eval.py \
             rlbench.tasks=[$t] \
             rlbench.task_name='multi' \
             rlbench.demo_path=$PERACT_ROOT/data/extended \
@@ -107,6 +107,6 @@ for t in "${tasks[@]}"; do
             risk.search_size=20 \
             risk.search_step=2 \
             risk.log_dir="/home/bobwu/shared/safe_action_conf100_set/base_${t}/" \
-            risk.enabled=False
+            risk.enabled=True
     done
 done
