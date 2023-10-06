@@ -290,7 +290,7 @@ class VectorScaler:
         # return (torch.sum(self.model.trans_w-1)**2 + torch.sum(self.model.trans_b**2))/self.trans_dim**3
         return self.info
     
-    def save_parameter(self, task_name=None, savedir='/home/bobwu/UQ/peract_headless/uncertainty_module/checkpoints'):
+    def save_parameter(self, task_name=None, savedir=None):
         savedir = self.scaler_log_root
         
         if not task_name:
@@ -304,7 +304,7 @@ class VectorScaler:
             os.makedirs(savedir)
         torch.save(self.model.state_dict(), full_path)
     
-    def load_parameter(self, task_name=None, savedir='/home/bobwu/UQ/peract_headless/uncertainty_module/checkpoints'):
+    def load_parameter(self, task_name=None, savedir=None):
         savedir = self.scaler_log_root
         print('task_name', task_name)
         if not task_name:
