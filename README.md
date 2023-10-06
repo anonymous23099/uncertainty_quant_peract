@@ -8,8 +8,10 @@
    pip install --upgrade pip
 
    # git clone from submodules:
-   https://anonymous.4open.science/r/YARR-B3E4/README.md
-   https://anonymous.4open.science/r/peract_reliability-F765/README.md
+   PyRep: git clone https://github.com/stepjam/PyRep.git
+   RLBench: git clone -b peract https://github.com/MohitShridhar/RLBench.git # note: 'peract' branch
+   YARR: https://anonymous.4open.science/r/YARR-B3E4/README.md
+   peract_reliability: https://anonymous.4open.science/r/peract_reliability-F765/README.md
    ```
 2. After cloning all submodules, install PyRep, RLBench, YARR accordingly in the submodule according to instructions in [Perceiver-Actor](https://github.com/peract/peract).
   
