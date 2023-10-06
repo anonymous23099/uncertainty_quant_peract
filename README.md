@@ -7,8 +7,9 @@
    source peract_env/bin/activate
    pip install --upgrade pip
 
-   # update all submodules
-   git submodule update --init --recursive
+   # git clone from submodules:
+   https://anonymous.4open.science/r/YARR-B3E4/README.md
+   https://anonymous.4open.science/r/peract_reliability-F765/README.md
    ```
 2. After cloning all submodules, install PyRep, RLBench, YARR accordingly in the submodule according to instructions in [Perceiver-Actor](https://github.com/peract/peract).
   
