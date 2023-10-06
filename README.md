@@ -40,8 +40,10 @@
    You can use ```bash data_gen.sh``` to generate the evaluation set, you can also parallelize it to speed up the process. Please make sure you have enough disk space before the data generation, the entire evaluation set takes ~98G.
    **We will upload the data we generated for evaluation in this paper soon**
 7. Run temperature scaling calibration on calibration data
+   
     Now you can start ```bash temperature_training.sh``` for the temperature calibration process.
    **We also provide the pre-trained temperature scaler in here**
 9. Run task evaluation on evaluation data
+    
     ```bash rollout_safe_load_temp.sh```
     
