@@ -42,10 +42,14 @@
    **We will upload the data we generated for evaluation in this paper soon**
 8. Run temperature scaling calibration on calibration data
    
-    Now you can start ```bash temperature_training.sh``` for the temperature calibration process.
+    Now you can start ```bash temperature_tuning.sh``` for the temperature calibration process.
    
    **We also provide the pre-trained temperature scaler in here**
 10. Run task evaluation on evaluation data
     
-    ```bash rollout_safe_load_temp.sh```
+    ```
+    bash rollout_no_temp_base.sh # original Perceiver-Actor
+    bash rollout_load_temp_uncalib.sh # our method uncalibrated 
+    bash rollout_safe_load_temp.sh # our method calibrated 
+    ```
     
