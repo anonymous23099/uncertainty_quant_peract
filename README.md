@@ -12,7 +12,7 @@
    ```
 2. After cloning all submodules, install PyRep, RLBench, YARR accordingly in the submodule according to instructions in [Perceiver-Actor](https://github.com/peract/peract).
   
-   Note you don't need to ```git clone``` the packages in the installation instructions again, they have been included in the submodules and have been heavily modified to add support for the uncertainty aware action selection strategy method.
+   Note you don't need to ```git clone``` the packages in the installation instructions again, they have been included in the submodules and have been **heavily modified** to add support for the uncertainty aware action selection strategy method.
 
 
 3. Add path shortcut and PYTHONPATH
