@@ -1,0 +1,12 @@
+[submodule "PyRep"]
+    path = PyRep
+    url = [https://github.com/BobWu1998/YARR/tree/peract]
+[submodule "peract_reliability"]
+    path = peract_reliability
+    url = [https://github.com/BobWu1998/peract_reliability/tree/temperature_scaling]
+[submodule "RLBench"]
+    path = RLBench
+    url = [https://github.com/MohitShridhar/RLBench/tree/peract]
+[submodule "YARR"]
+    path = YARR
+    url = [https://github.com/BobWu1998/YARR/tree/peract]
