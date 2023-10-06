@@ -47,7 +47,7 @@
    
     Now you can start ```bash temperature_tuning.sh``` for the temperature calibration process.
    
-   **We also provide the pre-trained temperature scaler in temperature_weights**
+   **We also provide the pre-tuned temperature scaler in temperature_weights**
 10. Run task evaluation on evaluation data
     
     ```
