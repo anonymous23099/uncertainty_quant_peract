@@ -229,7 +229,7 @@ class TemperatureScaler:
     
     def get_val(self):
         return self.temperature
-    def save_parameter(self, task_name=None, savedir='/home/bobwu/UQ/peract_headless/uncertainty_module/checkpoints'):
+    def save_parameter(self, task_name=None, savedir=None):
         savedir = self.scaler_log_root
         
         if not task_name:
@@ -243,7 +243,7 @@ class TemperatureScaler:
             os.makedirs(savedir)
         torch.save(self.temperature, full_path)
     
-    def load_parameter(self, task_name=None, savedir='/home/bobwu/UQ/peract_headless/uncertainty_module/checkpoints'):
+    def load_parameter(self, task_name=None, savedir=None):
         savedir = self.scaler_log_root
         # if using hard temp, don't load
         if not self.use_hard_temp:
