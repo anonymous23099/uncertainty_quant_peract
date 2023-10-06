@@ -16,7 +16,7 @@
 
 
 3. Add path shortcut and PYTHONPATH
-4. 
+   
    ```
    cd path/to/uncertainty_quant_peract/peract_reliability
    export PERACT_ROOT=$(pwd)
@@ -25,7 +25,7 @@
    export PYTHONPATH=/path/to/uncertainty_quant_peract
    ```
 
-3. Download ckpts for Perceiver-Actor
+4. Download ckpts for Perceiver-Actor
    
    Download a [pre-trained PerAct checkpoint](https://github.com/peract/peract/releases/download/v1.0.0/peract_600k.zip) trained with 100 demos per task (18 tasks in total):
    ```bash
@@ -35,9 +35,13 @@
 5. Download data used for confidence calibration
    
    Download the **val** folder in [pre-generated RLBench demonstrations](https://drive.google.com/drive/folders/0B2LlLwoO3nfZfkFqMEhXWkxBdjJNNndGYl9uUDQwS1pfNkNHSzFDNGwzd1NnTmlpZXR1bVE?resourcekey=0-jRw5RaXEYRLe2W6aNrNFEQ&usp=share_link) for confidence calibration, we recommend using [rclone](https://rclone.org/drive/) for the validation set
-7. Download data used for task evaluation
+6. Download data used for task evaluation
    
    You can use ```bash data_gen.sh``` to generate the evaluation set, you can also parallelize it to speed up the process. Please make sure you have enough disk space before the data generation, the entire evaluation set takes ~98G.
-   **We will upload the data we generated for evaluation in short**
-9. Run temperature scaling calibration on calibration data
-10. Run task evaluation on evaluation data
+   **We will upload the data we generated for evaluation in this paper soon**
+7. Run temperature scaling calibration on calibration data
+    Now you can start ```bash temperature_training.sh``` for the temperature calibration process.
+   **We also provide the pre-trained temperature scaler in here**
+9. Run task evaluation on evaluation data
+    ```bash rollout_safe_load_temp.sh```
+    
