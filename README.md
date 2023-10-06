@@ -9,20 +9,25 @@
 
    # update all submodules
    git submodule update --init --recursive
-
-   # after cloning all submodules, install all packages
-   Follow instructions from the official [PyRep](https://github.com/stepjam/PyRep) repo; reproduced here for convenience:
    ```
+2. After cloning all submodules, install PyRep
+  
+   Follow instructions from the official [PyRep](https://github.com/stepjam/PyRep) repo; reproduced here for convenience:
       PyRep requires version **4.1** of CoppeliaSim. Download: 
    - [Ubuntu 16.04](https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu16_04.tar.xz)
    - [Ubuntu 18.04](https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz)
    - [Ubuntu 20.04](https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu20_04.tar.xz)
-  
+  Add the following to your ~/.bashrc file: (NOTE: the 'EDIT ME' in the first line)
      ```
      export COPPELIASIM_ROOT=<EDIT ME>/PATH/TO/COPPELIASIM/INSTALL/DIR
      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
      export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
      ```
+   Remember to source your bashrc (source ~/.bashrc) or zshrc (source ~/.zshrc) after this.
+   ```
+   pip install -r requirements.txt
+   pip install .
+   ```
 2. Add path Go to "$path/to/uncertainty_quant_peract"
    ```
    cd $path/to/uncertainty_quant_peract/peract_reliability
