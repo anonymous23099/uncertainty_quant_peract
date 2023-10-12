@@ -42,7 +42,7 @@ for t in "${tasks[@]}"; do
         risk.rot_conf_thresh=0.014 \
         risk.search_size=20 \
         risk.search_step=2 \
-        risk.log_dir="$PATH_TO_EVAL_RESULTS+"/base_${t}/" \
+        risk.log_dir=$PATH_TO_EVAL_RESULTS+"/base_${t}/" \
         risk.enabled=True \
         temperature.load_indiv_temp=True \
         temperature.temp_log_root=$PATH_TO_TEMP
